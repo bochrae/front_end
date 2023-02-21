@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <ul class = "navbar-nav">
+        <li class = "nav-item">
+    <a routerLink="/manageusers" routerLinkActive="active" class="nav-link" >Manage Users</a>
+    
+</li>
+
+<li class = "nav-item">
+  <a routerLink="/userlist" routerLinkActive="active" class="nav-link" >List Users</a>
+</li>
+<li class = "nav-item">
+    <a routerLink="/login" routerLinkActive="active" class="nav-link" >logout</a>
+</li>
+</ul>
+</nav>
+
+<div class="col-md-6 offset-md-3">
+    <h3> Create User </h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label>Username</label>
+            <input type="text" class ="form-control" id = "username"
+                [(ngModel)] = "user.username" name = "username">
+        </div>
+    
+        <div class="form-group">
+            <label> Password</label>
+            <input type="text" class ="form-control" id = "password"
+                [(ngModel)] = "user.password" name = "password">
+        
+    
+        <div class="form-group">
+            <label> Role</label>
+            <input type="text" class ="form-control" id = "role"
+                [(ngModel)] = "user.role" name = "role">
+        </div>
+        
+    
+        <button class = "btn btn-success" type ="submit">Submit</button>
+        </div>
+    </form>
+    </div> 
